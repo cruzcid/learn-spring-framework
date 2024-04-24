@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 
 
 @Component
-@Primary
 public class PacmanGame implements GamingConsole{
 
 	@Override

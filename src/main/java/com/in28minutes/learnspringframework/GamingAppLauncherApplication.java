@@ -11,18 +11,11 @@ import com.in28minutes.learnspringframework.game.GamingConsole;
 
 @Configuration
 @ComponentScan("com.in28minutes.learnspringframework.game")
-public class App03GamingBasicJava2 {
-	
-	@Bean
-	public GameRunner gameRunner(GamingConsole game) {
-		System.out.println("Parameter: " + game);
-		var gameRunner = new GameRunner(game);
-		return gameRunner;
-	}
+public class GamingAppLauncherApplication {
 	
 	public static void main(String[] args) {				
 		var context = new AnnotationConfigApplicationContext
-				(App03GamingBasicJava2.class);
+				(GamingAppLauncherApplication.class);
 		
 		context.getBean(GamingConsole.class).up();
 		context.getBean(GameRunner.class).run();
