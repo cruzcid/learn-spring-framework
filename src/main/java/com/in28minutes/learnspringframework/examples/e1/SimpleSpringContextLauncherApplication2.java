@@ -9,11 +9,11 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan
-public class SimpleSpringContextLauncherApplication {
+public class SimpleSpringContextLauncherApplication2 {
 	
 	public static void main(String[] args) {				
 		var context = new AnnotationConfigApplicationContext
-				(SimpleSpringContextLauncherApplication.class);
+				(SimpleSpringContextLauncherApplication2.class);
 		
 		Arrays.stream(context.getBeanDefinitionNames())
 			.forEach(System.out::println);
